@@ -11,3 +11,6 @@ function getPlayerChoice(playerChoice){
     else alert ("The imput must be rock, paper or scissors in lowercase")
 }
 
+let humanScore = 0
+let computerScore = 0
+
