@@ -1,4 +1,13 @@
-function GetComputerChoice(max){
+function getComputerChoice(max){
     return Math.floor(Math.random() * max)
 }
-console.log(GetComputerChoice(3))
+
+
+function getPlayerChoice(playerChoice){
+     
+    if (playerChoice == "rock") return 0;
+    else if (playerChoice == "paper") return 1;
+    else if (playerChoice == "scissors") return 2;
+    else alert ("The imput must be rock, paper or scissors in lowercase")
+}
+
