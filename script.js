@@ -17,8 +17,7 @@ var computerScore = 0
 function playRound(player){
     let computerElection = getComputerChoice()
     let playerElection = getPlayerChoice(player)
-    console.log(computerElection)
-    console.log(playerElection)
+    
 
     if (playerElection == 0) {
         if(computerElection == 0) console.log("Draw")
