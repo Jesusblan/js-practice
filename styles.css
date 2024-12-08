@@ -19,3 +19,13 @@ body{
     color: #e2e2e2;
     gap: 35px;
 }
+.info{
+    color: #2da867;
+    text-align: center;
+    padding: 25px;
+
+}
+button{
+    background-color: #93c5a0;
+
+}
