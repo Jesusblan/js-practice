@@ -9,6 +9,7 @@ const scissorsButton = document.querySelector("#scissors")
 
 var humanScore = 0
 var computerScore = 0
+var round = 0
 
 function playRound(player){
 
@@ -59,8 +60,10 @@ function playRound(player){
             infoContainer.textContent = "Draw"
         }
     }
+    ++round
     playerContainer.textContent = ("Player: "+humanScore)
     computerContainer.textContent = ("Computer: "+computerScore)
+    roundContainer.textContent = ("round: "+round)
     
 }
 
