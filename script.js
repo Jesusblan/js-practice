@@ -3,29 +3,21 @@ let computerContainer = document.querySelector("#computerScore")
 let roundContainer = document.querySelector("#round")
 let infoContainer = document.querySelector(".info")
 
-
-
-
-
-function getComputerChoice(){
-    return Math.floor(Math.random() * 3)
-}
-
-
-function getPlayerChoice(playerChoice){
-     
-    if (playerChoice == "rock") return 0;
-    else if (playerChoice == "paper") return 1;
-    else if (playerChoice == "scissors") return 2;
-    else alert ("The imput must be rock, paper or scissors in lowercase")
-}
+const rockButton = document.querySelector("#rock")
+const paperButton = document.querySelector("#paper")
+const scissorsButton = document.querySelector("#scissors")
 
 var humanScore = 0
 var computerScore = 0
 
 function playRound(player){
+
+    function getComputerChoice(){
+        return Math.floor(Math.random() * 3)
+    }
+
     let computerElection = getComputerChoice()
-    let playerElection = getPlayerChoice(player)
+    let playerElection = player
     
 
     if (playerElection == 0) {
@@ -69,6 +61,10 @@ function playRound(player){
     }
     playerContainer.textContent = ("Player: "+humanScore)
     computerContainer.textContent = ("Computer: "+computerScore)
-    console.log("Player:",humanScore)
-    console.log("Computer:",computerScore)
+    
 }
+
+rockButton.addEventListener("click", () => playRound(0))
+paperButton.addEventListener("click", () => playRound(1))
+scissorsButton.addEventListener("click", () => playRound(2))
+
