@@ -1,3 +1,21 @@
+body{
+    background-color: #e2e2e2;
+}
+
 .title{
     color: #1f7633;
+    text-align: center;
+}
+.display{
+    display: flex;
+    justify-content: center;
+    color: #2ca548;
+    gap: 30px;
+    padding: 50px;
+}
+.input{
+    display: flex;
+    justify-content: center;
+    color: #e2e2e2;
+    gap: 35px;
 }
