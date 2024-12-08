@@ -1,5 +1,7 @@
-
-
+let playerContainer = document.querySelector("#playerScore")
+let computerContainer = document.querySelector("#computerScore")
+let roundContainer = document.querySelector("#round")
+let infoContainer = document.querySelector(".info")
 
 
 
@@ -27,44 +29,46 @@ function playRound(player){
     
 
     if (playerElection == 0) {
-        if(computerElection == 0) console.log("Draw")
+        if(computerElection == 0) infoContainer.textContent = "Draw"
         else if(computerElection == 1) {
             ++computerScore
-            console.log("You lose!")
+            infoContainer.textContent = "You lose..."
         }
         else{
             ++humanScore
-            console.log("You win!")
+            infoContainer.textContent = "You win!"
         }
     }
     else if (playerElection == 1) {
         if(computerElection == 0) {
             ++humanScore
-            console.log("You win!")
+            infoContainer.textContent = "You win!"
         }
 
-        else if(computerElection == 1) console.log("Draw!")
+        else if(computerElection == 1) infoContainer.textContent = "Draw"
         
         else{
             ++computerScore
-            console.log("You lose!")
+            infoContainer.textContent = "You lose..."
         }
     }
 
     else {
         if(computerElection == 0) {
             ++computerScore
-            console.log("You lose!")
+            infoContainer.textContent = "You lose..."
         }
 
         else if(computerElection == 1) {
             ++humanScore
-            console.log("You win!")
+            infoContainer.textContent = "You win!"
         }
         else{
-            console.log("Draw!")
+            infoContainer.textContent = "Draw"
         }
     }
+    playerContainer.textContent = ("Player: "+humanScore)
+    computerContainer.textContent = ("Computer: "+computerScore)
     console.log("Player:",humanScore)
     console.log("Computer:",computerScore)
 }
